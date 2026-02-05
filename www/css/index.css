@@ -81,7 +81,7 @@ h1 {
 .event {
     border-radius:4px;
     color:#FFFFFF;
-    font-size:12px;
+    font-size:11px;
     margin:0px 30px;
     padding:2px 0px;
 }
@@ -115,4 +115,39 @@ h1 {
     body {
         background-image:linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
     }
+}
+/* মোবাইল রেসপন্সিভ ফিক্স */
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* ডানে স্ক্রল হওয়া বন্ধ করবে */
+}
+
+/* ইনপুট ফিল্ড এবং ড্রপডাউন ফিক্স */
+select, input {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* টেবিল রেসপন্সিভ করা */
+table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* টেবিল বড় হলে ডানে স্ক্রল করা যাবে */
+    white-space: nowrap;
+}
+
+/* কার্ডের ভেতরের টেক্সট ওভারল্যাপ ফিক্স */
+.flex {
+    flex-wrap: wrap; /* Tailwind ব্যবহার করলে এলিমেন্ট নিচে নামিয়ে দেবে */
+}
+
+/* নাম এবং আইডি যাতে ভেঙে না যায় */
+h1, h2, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
