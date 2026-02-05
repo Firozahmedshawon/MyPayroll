@@ -19,11 +19,16 @@ jobs:
       - name: Build APK
         run: |
           cordova platform add android
-          cordova build android --release
+          # আমরা এবার সাধারণ বিল্ড দেব যাতে ফাইল খুঁজে পাওয়া সহজ হয়
+          cordova build android
           
+      - name: Find APK Path
+        run: find platforms/android -name "*.apk"
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: SmartPayroll-APK
-          path: platforms/android/app/build/outputs/apk/release/*.apk
+          # এখানে আমরা একটু ব্রড পাথ দিচ্ছি যাতে ফাইলটি মিস না হয়
+          path: platforms/android/app/build/outputs/apk/**/*.apk
           
