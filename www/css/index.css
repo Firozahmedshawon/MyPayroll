@@ -151,3 +151,16 @@ h1, h2, p {
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
+/* সব বাটনের ডিফল্ট স্টাইল */
+button {
+    color: white !important;
+    background-color: #2563eb !important; /* নীল রঙ */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+/* কোম্পানি নামের হেডিং এর জন্য */
+header h1, .company-name {
+    color: #1e293b !important; /* গাঢ় ধূসর/কালো রঙ */
+}
